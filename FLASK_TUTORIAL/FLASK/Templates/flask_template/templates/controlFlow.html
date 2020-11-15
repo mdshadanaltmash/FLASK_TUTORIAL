@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Welcome to Control Flow Tutorial</h1>
+    <ul>
+      {%for num in squares%}
+        <li>{{num}}</li>
+      {%endfor%}
+    </ul>
+    {%if 'Shadan' in names%}
+    <p>Found you Shadan!</p>
+    {%else%}
+    <p>'Shadan is missing!'</p>
+    {%endif%}
+  </body>
+</html>
