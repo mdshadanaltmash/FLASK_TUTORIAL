@@ -2,14 +2,15 @@
     {% block content %}
     <div class="jumbotron">
       <h1>Welcome to Cricket Signup Page!</h1>
-      <p>Fill out Form</p>
+      <p>Let's see if your username is secure!</p>
+      <p>Fill out the Form below with a User Name that has these restraints</p>
       <p>Notice we don't save the details in database yet!</p>
-      <form  action="{{url_for('thankyou')}}">
 
-      <label for="first">First Name: </label>
-      <input type="text" name="first">
-      <label for="last">last Name: </label>
-      <input type="text" name="last">
+      <form  action="{{url_for('report')}}">
+
+      <label for="first">User Name: </label>
+      <input type="text" name="uname">
+      
       <input type="submit" value="Submit Form">
 
     </form>

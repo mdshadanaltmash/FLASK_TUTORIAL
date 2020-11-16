@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+    {% block content %}
+    <div class="jumbotron">
+      <h1>Welcome to Cricket Page!</h1>
+      <p>Let's see how you performed!!!</p>
+
+    {% if status %}
+    <p>Your username passed all 3 requirements!</p>
+
+    {%else%}
+    <p>Oh no! Looks like you had issues with your username!</p>
+    <p>Here are the requirements You Failed:</p>
+    <ol>
+      {% for reason in reasons %}
+        <li>{{reason}}</li>
+      {%endfor%}
+    </ol>
+
+    {%endif%}
+
+      </div>
+    {% endblock %}
