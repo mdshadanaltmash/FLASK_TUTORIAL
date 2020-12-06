@@ -1,0 +1,21 @@
+{# INDEX.HTML #}
+<h1>This is a Dog breed info page</h1>
+<p>
+{% if breed %}
+The breed you entered is {{breed}} <br>
+Please enter the breed below to update the breed.
+
+{% else %}
+Please enter your breed:
+
+{% endif %}
+
+</p>
+
+<form  method="post">
+
+  {{ form.hidden_tag() }}
+  {{ form.breed.label }}  {{ form.breed() }}
+  {{ form.submit() }}
+
+</form>
