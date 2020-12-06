@@ -1,0 +1,15 @@
+{# INDEX.HTML #}
+<h1>This is a Dog survey page</h1>
+
+<form  method="post">
+
+  {{ form.hidden_tag() }}
+  {{ form.breed.label }}  {{ form.breed() }} <br>
+  {{ form.neutered.label }} {{ form.neutered }} <br>
+  {{ form.mood.label }} {{ form.mood }} <br>
+  {{ form.food_choice.label }} {{ form.food_choice }} <br>
+  Any other FeedBack?
+  {{ form.feedback.label }} {{ form.feedback }} <br>
+  {{ form.submit() }}
+
+</form>

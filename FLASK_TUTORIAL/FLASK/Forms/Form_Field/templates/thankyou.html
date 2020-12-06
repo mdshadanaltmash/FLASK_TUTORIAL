@@ -1,0 +1,12 @@
+<h1>ThankYou! Here is the info you gave us:</h1>
+
+<ul>
+  <li>Breed: {{ session['breed'] }}</li>
+  <li>Neutered: {{ session['neutered'] }}</li>
+  <li>Mood: {{ session['mood'] }}</li>
+  <li>Food Choice: {{ session['food_choice']}}</li>
+  {% if session['feedback'] %}
+    <li>FeedBack: {{ session['feedback'] }}</li> <p>Thanks for the FeedBack! Your FeedBack is very valuable to us.</p>
+
+  {% endif %}
+</ul>
