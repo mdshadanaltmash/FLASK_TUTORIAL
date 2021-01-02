@@ -5,7 +5,7 @@ Steps to do Migrate
 4. in cmd
   a. set FLASK_APP=filename.py (your main file name)
   b. flask db init
-  c. db migrate -m "your message"
+  c. flask db migrate -m "your message"
   d. flask db upgrade
 
 
