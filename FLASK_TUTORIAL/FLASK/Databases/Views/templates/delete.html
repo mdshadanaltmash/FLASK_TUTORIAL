@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <div class="jumbotron">
+   <h2>Did a puppy get adopted?</h2>
+   <p>If So: Please submit their id to remove them from list.</p>
+
+   <form  method="POST">
+     {{ form.hidden_tag() }}
+     {{form.id.label}}{{form.id()}}
+     {{form.submit()}}
+   </form>
+</div>
+{% endblock %}
