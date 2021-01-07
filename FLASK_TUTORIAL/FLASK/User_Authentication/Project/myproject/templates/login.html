@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <div class="jumbotron">
+   <form  method="post">
+     {{ form.hidden_tag() }}
+     {% if current_user.is_authenticated %}
+       <!--some alerts methods needs to be added-->
+     {% endif %}
+     {{ form.email.label }} {{ form.email() }}<br>
+     {{ form.password.label }} {{ form.password() }}<br>
+     {{ form.submit() }}
+   </form>
+</div>
+{% endblock %}
