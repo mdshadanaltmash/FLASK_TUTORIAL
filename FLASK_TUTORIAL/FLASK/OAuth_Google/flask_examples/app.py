@@ -9,9 +9,10 @@ from flask_dance.contrib.google import make_google_blueprint,google
 app = Flask(__name__)
 app.config['SECRET_KEY']='mysecret'
 
-blueprint=make_google_blueprint(client_id='98132762827-jbd8lrlqbghp23bqp7aiv15nfjrbrc2v.apps.googleusercontent.com'
-                                ,client_secret='jfxpKZcrMJHiI4WUzMVB95yU',offline=True
+blueprint=make_google_blueprint(client_id='get it from  https://console.developers.google.com'
+                                ,client_secret='get it from https://console.developers.google.com',offline=True
                                 ,scope=["https://www.googleapis.com/auth/userinfo.email", "openid", "https://www.googleapis.com/auth/userinfo.profile"])
+#set offline=False if for online or by default it is False
 app.register_blueprint(blueprint,url_prefix='/login')
 
 @app.route('/')
